@@ -24,7 +24,7 @@ namespace EmployeeManagement.Controllers
             // Pass the list of employees to the view
             return View(model);
         }
-        public ViewResult Details()
+        public ViewResult Details(int? id)
         {
             //Employee model = _employeeRepository.GetEmployee(1);
 
@@ -34,7 +34,7 @@ namespace EmployeeManagement.Controllers
             // Instantiate HomeDetailsViewModel and store Employee details and PageTitle
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Employee = _employeeRepository.GetEmployee(1),
+                Employee = _employeeRepository.GetEmployee(id??1),
                 PageTitle = "Employee Details"
             };
 
