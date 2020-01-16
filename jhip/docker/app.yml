@@ -1,0 +1,6 @@
+version: '2'
+services:
+  tt-app:
+    image: tt
+    ports:
+      - 80:80
