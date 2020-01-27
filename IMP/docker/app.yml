@@ -1,0 +1,6 @@
+version: '2'
+services:
+  jhipnet-app:
+    image: jhipnet
+    ports:
+      - 80:80
